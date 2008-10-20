@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# Copyright (c) 2008 Daniel Schierbeck
+#
+# List the versioned files in the current directory.
+
+USAGE=""
+LONG_USAGE="List the versioned files in the current directory"
+SUBDIRECTORY_OK=Yes
+OPTIONS_SPEC=
+. git-sh-setup
+
+git-ls-files $@ | cut -d '/' -f 1 | sort | uniq | grep --invert-match '"'
+
+exit 0
