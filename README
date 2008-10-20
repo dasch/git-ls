@@ -1,0 +1,9 @@
+
+git-ls
+======
+
+This small project aims to provide a simplified `git-ls-files`, in the form of
+`git-ls`. This command will work more like the normal UNIX `ls`. Its output
+is meant for human consumption, and shows by default all versioned files and
+directories in the current directory. A "versioned directory" here means a
+directory which contains versioned files.
